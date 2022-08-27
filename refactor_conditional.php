@@ -30,7 +30,12 @@ class refactor_conditional
 
   public function withDraw($money)
   {
-    // default 
     return  $money > $this->balance ? -1 : $this->balance -= $money;
+  }
+
+  public function priceQuantity()
+  {
+    $basePrice = $this->quantity * $this->itemPrice;
+    return $basePrice > 1000  ? $basePrice * 0.95 : $basePrice * 0.98;
   }
 }
