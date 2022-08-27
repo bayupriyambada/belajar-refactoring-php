@@ -32,7 +32,5 @@ class refactor_conditional
   {
     // default 
     return  $money > $this->balance ? -1 : $this->balance -= $money;
-
-    // return $money > $this->balance = -1 ?: 0;
   }
 }
