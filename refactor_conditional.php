@@ -2,7 +2,7 @@
 
 class refactor_conditional
 {
-  function isDiscountCoupon($discountCoupunt, $coupun)
+  public function isDiscountCoupon($discountCoupunt, $coupun)
   {
     // refactoring 1
     $discount = $discountCoupunt ? 95 : 98;
@@ -12,18 +12,18 @@ class refactor_conditional
     return $discountCoupunt ? $discount * 95 : $discount * 98;
   }
 
-  function isDisibilyAmount()
+  public function isDisibilyAmount()
   {
     return $this->isNotEligibleForDisability ?: 0;
   }
 
-  function fragmentDuplicated($isSpesialDeal, $price)
+  public function fragmentDuplicated($isSpesialDeal, $price)
   {
     $this->isDiscountCoupon($isSpesialDeal, $price);
     send();
   }
 
-  function isNullConditioon($customer)
+  public function isNullConditioon($customer)
   {
     return $customer === null ? BillingPlan::basic : $customer->getPlan();
     // if ($customer === null) {
