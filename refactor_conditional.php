@@ -26,10 +26,5 @@ class refactor_conditional
   public function isNullConditioon($customer)
   {
     return $customer === null ? BillingPlan::basic : $customer->getPlan();
-    // if ($customer === null) {
-    //   $plan = BillingPlan::basic();
-    // } else {
-    //   $plan = $customer->getPlan();
-    // }
   }
 }
