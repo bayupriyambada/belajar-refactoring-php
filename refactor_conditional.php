@@ -27,4 +27,12 @@ class refactor_conditional
   {
     return $customer === null ? BillingPlan::basic : $customer->getPlan();
   }
+
+  public function withDraw($money)
+  {
+    // default 
+    return  $money > $this->balance ? -1 : $this->balance -= $money;
+
+    // return $money > $this->balance = -1 ?: 0;
+  }
 }
